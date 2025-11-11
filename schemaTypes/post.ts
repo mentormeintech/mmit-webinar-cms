@@ -23,7 +23,7 @@ export default defineType({
       title: 'Body',
       type: 'array',
       of: [{ type: 'block' }],
-      validation: Rule => Rule.required(),
+      // validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'author',
