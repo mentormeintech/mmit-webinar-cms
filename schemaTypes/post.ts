@@ -49,27 +49,38 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
-      name: 'excerpt1',
+      name: 'excerpt',
       title: 'Excerpt',
       type: 'text',
       rows: 3,
       description: 'A short summary of the post.',
     }),
+    
+    // 🔥 SPEAKER DETAILS FIELDS
+
     defineField({
-      name: 'excerpt',
-      title: 'Excerpt 1',
-      type: 'array',
-      of: [{ type: 'block' }],
-      // validation: Rule => Rule.required(),
-    }),
-    defineField({
-      name: 'profileLink',
-      title: 'Speaker Profile Link',
-      type: 'text',
-      rows: 3,
-      description: 'A short summary of the post.',
+      name: 'speakerName',
+      title: 'Speaker Name',
+      type: 'string',
+      validation: Rule => Rule.required().error('Speaker name is required'),
     }),
 
+    defineField({
+      name: 'speakerImage',
+      title: 'Speaker Image',
+      type: 'image',
+      options: { hotspot: true },
+    }),
+
+    defineField({
+      name: 'speakerLinkedIn',
+      title: 'Speaker LinkedIn Profile',
+      type: 'url',
+      validation: Rule => Rule.uri({
+        allowRelative: false,
+        scheme: ['http', 'https'],
+      }),
+    }),
     // 🔥 New field: Sections (array of modular content blocks)
     defineField({
       name: 'sections',
