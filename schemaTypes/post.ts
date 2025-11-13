@@ -51,11 +51,12 @@ export default defineType({
     defineField({
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'text',
-      rows: 3,
+      type: 'array',
+      // rows: 3,
       description: 'A short summary of the post.',
+      of: [{ type: 'block' }],
     }),
-       defineField({
+    defineField({
       name: 'profileLink',
       title: 'Speaker Profile Link',
       type: 'text',
