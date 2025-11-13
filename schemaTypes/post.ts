@@ -55,6 +55,13 @@ export default defineType({
       rows: 3,
       description: 'A short summary of the post.',
     }),
+       defineField({
+      name: 'profileLink',
+      title: 'Speaker Profile Link',
+      type: 'text',
+      rows: 3,
+      description: 'A short summary of the post.',
+    }),
 
     // 🔥 New field: Sections (array of modular content blocks)
     defineField({
