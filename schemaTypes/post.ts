@@ -49,7 +49,7 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
-      name: 'excerpt',
+      name: 'excerpt1',
       title: 'Excerpt',
       type: 'text',
       rows: 3,
