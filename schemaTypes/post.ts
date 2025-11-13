@@ -56,8 +56,8 @@ export default defineType({
       description: 'A short summary of the post.',
     }),
     defineField({
-      name: 'summary',
-      title: 'Summary',
+      name: 'excerpt',
+      title: 'Excerpt 1',
       type: 'array',
       of: [{ type: 'block' }],
       // validation: Rule => Rule.required(),
