@@ -51,10 +51,16 @@ export default defineType({
     defineField({
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'array',
-      // rows: 3,
+      type: 'text',
+      rows: 3,
       description: 'A short summary of the post.',
+    }),
+    defineField({
+      name: 'summary',
+      title: 'Summary',
+      type: 'array',
       of: [{ type: 'block' }],
+      // validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'profileLink',
