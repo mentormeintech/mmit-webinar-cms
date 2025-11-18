@@ -49,6 +49,13 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
+  name: 'timezone',
+  title: 'Timezone',
+  type: 'string',
+  hidden: true,
+  initialValue: () => Intl.DateTimeFormat().resolvedOptions().timeZone
+}),
+    defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'text',
