@@ -62,7 +62,7 @@ export default defineType({
       name: 'speakerName',
       title: 'Speaker Name',
       type: 'string',
-      validation: Rule => Rule.required().error('Speaker name is required'),
+      // validation: Rule => Rule.required().error('Speaker name is required'),
     }),
 
     defineField({
