@@ -49,12 +49,12 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
-  name: 'timezone',
-  title: 'Timezone',
-  type: 'string',
-  hidden: true,
-  initialValue: () => Intl.DateTimeFormat().resolvedOptions().timeZone
-}),
+      name: 'timezone',
+      title: 'Timezone',
+      type: 'string',
+      // hidden: true,
+      initialValue: () => Intl.DateTimeFormat().resolvedOptions().timeZone
+    }),
     defineField({
       name: 'excerpt',
       title: 'Excerpt',
@@ -62,7 +62,7 @@ export default defineType({
       rows: 3,
       description: 'A short summary of the post.',
     }),
-    
+
     // 🔥 SPEAKER DETAILS FIELDS
 
     defineField({
